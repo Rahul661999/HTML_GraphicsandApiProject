@@ -1,0 +1,163 @@
+<html>
+   <head>
+       <title> HTML Assignment</title>
+       <link rel="stylesheet" href="Assignment_L2.css">
+       <script type="text/javascript" src="Assignment_L2.js"></script>
+
+       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   </head>
+
+   <body>
+
+    <div class="header">
+        <div class="header-right">
+            <div class="active">Astra Project - Kanban Board</div>
+        </div>
+    </div>
+
+    <div id="location"></div>
+
+    <div class="box">
+        <div class="row">
+            <div class="column" style="background-color:#ddd; margin-left: 15px;" ondrop="drop1(event)" ondragover="allowDrop(event)" id="draglist1">
+            
+
+                <svg width="150" height="50" style="margin-bottom: 10px;" onload="drop1(event)">
+                    <rect width="200" height="80"
+                    style="fill:#595959;stroke-width:10;"/>
+                    Sorry, your browser does not support inline SVG.
+
+                    <text fill="black" font-size="20" font-family="Verdana" x="4" y="30"> Backlog </text>
+                    <text fill="black" font-size="20" font-family="Verdana" x="90" y="30" id="myText1"></text>
+                </svg>
+
+                <div class="card text-center" draggable="true" ondragstart="drag1(event)" id="drag1">
+                <div class="card-body">
+                    <p class="card-text" style="color:#595959; margin-right:180px;">L2A-4</p>
+                    <p class="card-text" style="margin-right:100px;"><b>User:Edit Profile</b></p>
+                </div>
+                <div class="card-footer">
+                    <p class="card-text" style="margin-right:110px;">
+                    <img src="left_align.svg" style="width:16px;"/>&nbsp;&nbsp;Author blogs
+                    </p>
+                </div>
+                </div>
+
+                <div class="card text-center" draggable="true" ondragstart="drag1(event)" id="drag2">
+                    <div class="card-body">
+                        <p class="card-text" style="color:#595959; margin-right:180px;">L2A-5</p>
+                        <p class="card-text" style="margin-right:80px;"><b>User:Create Profile</b></p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="card-text" style="margin-right:110px;">
+                        <img src="left_align.svg" style="width:16px;"/>&nbsp;Author blogs
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card text-center" draggable="true" ondragstart="drag1(event)" id="drag3">
+                    <div class="card-body">
+                        <p class="card-text" style="color:#595959; margin-right:180px;">L2A-6</p>
+                        <p class="card-text" style="margin-right:80px;"><b>User:Edit my article</b></p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="card-text" style="margin-right:110px;">
+                        <img src="left_align.svg" style="width:16px;"/>&nbsp;Author blogs
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card text-center" draggable="true" ondragstart="drag1(event)" id="drag4">
+                    <div class="card-body">
+                        <p class="card-text" style="color:#595959; margin-right:180px;">L2A-7</p>
+                        <p class="card-text" style="margin-right:100px;"><b>User:Edit Profile</b></p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="card-text" style="margin-right:110px;">
+                        <img src="left_align.svg" style="width:16px;"/>&nbsp;Author blogs
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="column" style="background-color:#ffffb3; margin-left: 9px;" ondrop="drop2(event)" ondragover="allowDrop(event)" id="draglist2">
+            
+            <svg width="200" height="50" style="margin-bottom: 10px;" onload="drop2(event)">
+                <rect width="200" height="80" style="fill:#ff6600;stroke-width: 10;" />
+                Sorry, your browser does not support inline SVG.
+                <text fill="black" font-size="20" font-family="Verdana" x="4" y="30">Selected for Dev</text>
+                <text fill="black" font-size="20" font-family="Verdana" x="180" y="30" id="myText2"></text>
+            </svg>
+            
+            <div class="card text-center" draggable="true" ondragstart="drag2(event)" id="drag5">
+                <div class="card-body">
+                    <p class="card-text" style="color: #ff6600; margin-right: 180px;">L2A-3</p>
+                    <p class="card-text" style="margin-right: 24px;"><b>Admin: Block user account</b></p>
+                </div>
+                <div class="card-footer">
+                    <p class="card-text" style="margin-right: 75px;">
+                    <img src="left_align.svg" style="width: 16px;"/>&nbsp;
+                    User management
+                    </p>
+                </div>
+            
+            </div>
+            </div>
+
+
+            <div class="column" style="background-color:#ffccff; margin-left: 9px;" ondrop="drop3(event)" ondragover="allowDrop(event)" id="draglist3">
+            
+                <svg width="200" height="50" style="margin-bottom: 10px;" onload="drop3(event)">
+                    <rect width="200" height="80" style="fill:#cc33ff;stroke-width: 10;" />
+                    Sorry, your browser does not support inline SVG.
+                    <text fill="black" font-size="20" font-family="Verdana" x="4" y="30">In Progress</text>
+                    <text fill="black" font-size="20" font-family="Verdana" x="130" y="30" id="myText3"></text>
+                </svg>
+                
+                <div class="card text-center" draggable="true" ondragstart="drag3(event)" id="drag6">
+                    <div class="card-body">
+                        <p class="card-text" style="color: #cc33ff; margin-right: 190px;">L2A-1</p>
+                        <p class="card-text" style="margin-right: 100px;"><b>Admin: List users</b></p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="card-text" style="margin-right: 75px;">
+                        <img src="left_align.svg" style="width: 16px;"/>&nbsp;
+                        User management
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card text-center" draggable="true" ondragstart="drag3(event)" id="drag7">
+                    <div class="card-body">
+                        <p class="card-text" style="color: #cc33ff; margin-right: 190px;">L2A-2</p>
+                        <p class="card-text" style="margin-right: 10px;"><b>Admin: Approve user account</b></p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="card-text" style="margin-right: 80px;">
+                        <img src="left_align.svg" style="width: 16px;"/>&nbsp;
+                        User management
+                        </p>
+                    </div>
+                </div>      
+                </div>
+
+
+                <div class="column" style="background-color:#99ff99; margin-left: 8.5px;" ondrop="drop4(event)" ondragover="allowDrop(event)"  id="draglist4">
+                
+                    <svg width="200" height="50" style="margin-bottom:10px;" onload="drop4(event)">
+                        <rect width="200" height="80" style="fill:#00cc00; stroke-width:10;" />
+                        Sorry , your browser does not support inline SVG.
+                        <text fill="black" font-size="20" font-family="Verdana" x="4" y="30">Done</text>
+                        <text fill="black" font-size="20" font-family="Verdana" x="80" y="30" id="myText4"></text>
+                    </svg>
+                
+                </div>
+
+        </div>
+    </div>
+   </body>
+</html>
